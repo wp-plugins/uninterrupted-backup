@@ -2,7 +2,7 @@
 Tags: uninterrupted, backup, recovery, disable, backdoor, error, blocked, fatal, deactivate, provide, access, path
 Requires at least: 3.5
 Tested up to: 3.5
-Stable tag: 0.1
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

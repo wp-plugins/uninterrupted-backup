@@ -5,7 +5,7 @@
 * Author: Ahmed Said
 * Author URI: http://ubp.wpp.longestvision.com/
 * Description: Detect fatal errors that might be produced by the installed active Plugins, provide secure backdoor for deactivating the target Plugin.
-* Version: 0.1
+* Version: 0.1.2
 * License: GPLv2 or later
 */
 

@@ -1,6 +1,6 @@
 <?php
 /**
-* 
+* UB Plugin constants.
 */
 
 /**

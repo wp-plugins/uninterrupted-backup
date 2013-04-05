@@ -14,13 +14,6 @@ defined('ABSPATH') or die(NO_DIRECT_ACCESS_MSG);
 class UBP_Controller_Setup extends UBP_Lib_Mvc_Controller {
 	
 	/**
-	* Wordpress-Plugins relative path to UBP Plugin
-	* main file.
-	* 
-	*/
-	const UBP_PLUGIN_REL_FILE = 'ubp/ubp.php';
-	
-	/**
 	* Integrate UBP with Wordpress.
 	* 
 	* Add UBP Plugin at the first of the active_plugins queue list,
@@ -33,14 +26,16 @@ class UBP_Controller_Setup extends UBP_Lib_Mvc_Controller {
 		// Initialize.
 		$request =& $this->getRequest();
 		$response =& $this->getResponse();
+		// Get UB Plugin main file relative path to UB Plugin.
+		$ubpMFRPath = basename(dirname(UBP::FILE)) . '/' . basename(UBP::FILE);
 		// Read plugins!
 		$plugins = $request->get('plugins', 'post');
-		// Always put the plugin as the first item!
-		$ubpPluginAtIndex = array_search(self::UBP_PLUGIN_REL_FILE, $plugins);
+		// Always put the plugin as the first item if its not!
+		$ubpPluginAtIndex = array_search($ubpMFRPath, $plugins);
 		if ($ubpPluginAtIndex) {
 			// Remove!
 			unset($plugins[$ubpPluginAtIndex]);
-			array_unshift($plugins, self::UBP_PLUGIN_REL_FILE);
+			array_unshift($plugins, $ubpMFRPath);
 			// Re-indexing!
 			$plugins = array_values($plugins);
 		}
