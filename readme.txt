@@ -43,5 +43,9 @@ I still have many useful ideas and feature to add to the Plugin however the Plug
 
 == Changelog ==
 
+= 0.1.2 =
+* Rename main file to has the same name as Plugin directory as Plugin directory changed to uninterrupted-backup due to the Plugin name changed.
+* Fix that searching for UBP Plugin by ts file always fail as the Plugin directory  name changed, dynamically get UB Plugin relative path file.
+
 = 0.1 =
-First beta release.
+* First beta release.
